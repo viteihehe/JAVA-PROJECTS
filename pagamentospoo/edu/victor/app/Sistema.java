@@ -5,6 +5,7 @@ import edu.victor.models.Estagiario;
 import edu.victor.models.Funcionario;
 import edu.victor.models.Pj;
 import edu.victor.util.Relatorio;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
@@ -30,55 +31,105 @@ public class Sistema {
                 System.out.println("3 - Estagiario");
                 System.out.println("4 - relatorio");
                 System.out.println("5 -sair");
-                cargo = sc.nextInt();
+                try {
+                    cargo = sc.nextInt();
+                } catch (InputMismatchException e) {
+                    throw new InputMismatchException("Deve se inserir um valor númerico");
+                }
 
                 switch (cargo){
                     case 1:
+                    double salarioBase;
                         sc.nextLine();
                         System.out.println("Insira o nome do Funcionario:");
-                        nome = sc.nextLine();
+                        try{
+                            nome = sc.nextLine();
+                        }
+                        catch(NullPointerException e){
+                            throw new NullPointerException("Não se pode deixar esse espaço em branco");
+                        }
 
                         System.out.println("Insira o salario base:");
-                        double salarioBase = sc.nextDouble();
+                        try {
+                           salarioBase  = sc.nextDouble();
+                        } catch (InputMismatchException e) {
+                            throw new InputMismatchException("O valor deve ser númerico e com . ao invés de virgulas");
+                        }
 
                         sc.nextLine();
                         System.out.println("Insira a função dentro da empresa:");
-                        funcao = sc.nextLine();
-
+                         try{
+                           funcao = sc.nextLine();
+                        }
+                        catch(NullPointerException e){
+                            throw new NullPointerException("Não se pode deixar esse espaço em branco");
+                        }
+                            
                         funcionarios[totalFuncionarios] = new Clt(nome, funcao ,salarioBase);
-                        totalFuncionarios++;
+                            totalFuncionarios++;
                         
                         break;
                     case 2:
+                    double valorHora;
+                    int horasTrabalhadas;
                          sc.nextLine();
                          System.out.println("Insira o nome do Funcionario:");
-                         nome = sc.nextLine();
+                         try{
+                            nome = sc.nextLine();
+                        }
+                        catch(NullPointerException e){
+                            throw new NullPointerException("Não se pode deixar esse espaço em branco");
+                        }
 
                          System.out.println("Insira a função dentro da empresa:");
-                        funcao = sc.nextLine();
+                        try{
+                           funcao = sc.nextLine();
+                        }
+                        catch(NullPointerException e){
+                            throw new NullPointerException("Não se pode deixar esse espaço em branco");
+                        }
 
                          System.out.println("Insira o valor por hora:");
-                         double valorHora = sc.nextDouble();
+                         try {
+                           valorHora = sc.nextDouble();
+                        } catch (InputMismatchException e) {
+                            throw new InputMismatchException("O valor deve ser númerico e com . ao invés de virgulas");
+                        }
+                         
 
                          System.out.println("Insira o total de horas trabalhadas:");
-                         int horasTrabalhadas = sc.nextInt();
+                         try {
+                           horasTrabalhadas = sc.nextInt();
+                        } catch (InputMismatchException e) {
+                            throw new InputMismatchException("O valor deve ser um número inteiro");
+                        }
+                       
 
                          funcionarios[totalFuncionarios] = new Pj(nome, funcao, valorHora, horasTrabalhadas);
-                         totalFuncionarios++;
+                             totalFuncionarios++;
                         
                         break;
                     case 3:
+                    double salarioFixo;
                          sc.nextLine();
                          System.out.println("Insira o nome do Funcionario:");
-                        nome = sc.nextLine();
+                         try{
+                            nome = sc.nextLine();
+                         }
+                         catch(NullPointerException e){
+                            throw new NullPointerException("Não se pode deixar esse espaço em branco");
+                         }
 
                         System.out.println("Insira o salario fixo:");
-                        double salarioFixo = sc.nextDouble();
+                        try {
+                           salarioFixo = sc.nextDouble();
+                        } catch (InputMismatchException e) {
+                            throw new InputMismatchException("O valor deve ser númerico e com . ao invés de virgulas");
+                        }
+                            funcao = "Estagiario";
 
-                        funcao = "Estagiario";
-
-                        funcionarios[totalFuncionarios] = new Estagiario(nome, funcao, salarioFixo);
-                        totalFuncionarios++;
+                            funcionarios[totalFuncionarios] = new Estagiario(nome, funcao, salarioFixo);
+                                totalFuncionarios++;
                         break;
                     case 4:
                        for(Funcionario auxi : funcionarios){
