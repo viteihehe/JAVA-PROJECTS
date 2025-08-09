@@ -4,8 +4,14 @@ import edu.victor.models.Clt;
 import edu.victor.models.Estagiario;
 import edu.victor.models.Funcionario;
 import edu.victor.models.Pj;
-import java.util.Scanner;
 import edu.victor.util.Relatorio;
+import java.util.Scanner;
+
+/**
+ * @author Victor Manuel
+ * @version 1.0
+ * @since 2023-10-01
+ */
 
 public class Sistema {
     public static void main(String[] args) {
