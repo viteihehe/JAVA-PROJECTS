@@ -1,1 +1,0 @@
-packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"edu.victor.app"},{"l":"edu.victor.models"},{"l":"edu.victor.util"}];updateSearchResults();
