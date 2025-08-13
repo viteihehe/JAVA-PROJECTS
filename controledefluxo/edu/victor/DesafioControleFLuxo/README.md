@@ -1,4 +1,4 @@
-Desafio Contador – Treinando Exceções em Java
+Desafio DIO – Treinando Exceções em Java
 
 📌 Descrição
 Este projeto é um exercício prático de tratamento de exceções e criação de exceções customizadas em Java.
