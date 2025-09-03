@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/JAVA-PROJECTS.iml" filepath="$PROJECT_DIR$/JAVA-PROJECTS.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bancodigitalDIO/bancodigitalDIO.iml" filepath="$PROJECT_DIR$/bancodigitalDIO/bancodigitalDIO.iml" />
+      <module fileurl="file://$PROJECT_DIR$/controledefluxo/controledefluxo.iml" filepath="$PROJECT_DIR$/controledefluxo/controledefluxo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/diocontabanco/diocontabanco.iml" filepath="$PROJECT_DIR$/diocontabanco/diocontabanco.iml" />
+      <module fileurl="file://$PROJECT_DIR$/modelagemiphone/modelagemiphone.iml" filepath="$PROJECT_DIR$/modelagemiphone/modelagemiphone.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sistemaatendimento/sistemaatendimento.iml" filepath="$PROJECT_DIR$/sistemaatendimento/sistemaatendimento.iml" />
+    </modules>
+  </component>
+</project>
